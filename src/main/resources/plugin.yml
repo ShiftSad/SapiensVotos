@@ -6,3 +6,9 @@ authors: [ Sadness ]
 commands:
   VoteToPlayer:
     description: Votar
+    aliases: votar
+    usage: "§cUso correto, /votar player"
+
+  Candidatar:
+    description: Candidatar
+    usage: "§cUso correto, /candidatar Presidente/Senador \n§cAviso, para canditatar-se a presidente custa 50.000$ e senador 25.000$."

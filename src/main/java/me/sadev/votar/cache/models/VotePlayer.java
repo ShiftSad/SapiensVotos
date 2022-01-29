@@ -1,5 +1,10 @@
 package me.sadev.votar.cache.models;
 
+import me.sadev.votar.VotosPlugin;
+import net.milkbowl.vault.economy.Economy;
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
+
 import java.util.Objects;
 
 public class VotePlayer {
@@ -36,6 +41,25 @@ public class VotePlayer {
 
     public void setVotos(int votos) {
         this.votos = votos;
+    }
+
+    public boolean withdrawPlayer(double money) {
+        Player player = Bukkit.getPlayer(getName());
+        Economy econ  = VotosPlugin.instance().econ;
+
+        if (!econ.has(player, money))
+            return false;
+
+        econ.withdrawPlayer(player, money);
+        return true;
+    }
+
+    public boolean depositPlayer(double money) {
+        Player player = Bukkit.getPlayer(getName());
+        Economy econ  = VotosPlugin.instance().econ;
+
+        econ.depositPlayer(player, money);
+        return true;
     }
 
     @Override

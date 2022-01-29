@@ -12,7 +12,6 @@ import org.jetbrains.annotations.NotNull;
 public class VoteToPlayer implements CommandExecutor {
 
     private final VotosPlugin plugin;
-
     public VoteToPlayer(VotosPlugin plugin) {
         this.plugin = plugin;
     }
