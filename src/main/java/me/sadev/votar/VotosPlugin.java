@@ -75,7 +75,6 @@ public final class VotosPlugin extends JavaPlugin {
             public void run() {
                 try {
                     PreparedStatement ps = mysql.getConnection().prepareStatement("SELECT * FROM `presidente` ORDER BY `VOTOS` DESC LIMIT 70");
-
                     ResultSet rs = ps.executeQuery();
 
                     while (rs.next()) {

@@ -33,7 +33,7 @@ public class Candidatar implements CommandExecutor {
 
         switch (args[0]) {
             case "presidente":
-                if (!plugin.players.get(player.getName()).withdrawPlayer(50000)) {
+                if (!plugin.vault.withdrawPlayer(player, 50000)) {
                     player.sendMessage(ChatColor.RED + "Você não tem dinheiro para executar essa transacão!");
                     return true;
                 }
