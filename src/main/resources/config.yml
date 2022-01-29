@@ -1,0 +1,7 @@
+Mysql:
+  host: "bcakthaunddgbl3sjm7f-mysql.services.clever-cloud.com"
+  database: "bcakthaunddgbl3sjm7f"
+  user: "usvo2yxd7lbfd4z8"
+  password: "gdZn8iW54gJ7fNrj7DjF"
+  port: 3306
+  table: "presidente"

@@ -1,0 +1,8 @@
+name: SapiensVotos
+version: '${project.version}'
+main: me.sadev.votar.VotosPlugin
+api-version: 1.16
+authors: [ Sadness ]
+commands:
+  VoteToPlayer:
+    description: Votar
