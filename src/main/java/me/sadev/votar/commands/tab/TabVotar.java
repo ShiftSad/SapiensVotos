@@ -23,7 +23,7 @@ public class TabVotar implements TabCompleter {
         if (args.length == 1) {
             return plugin.topNome;
         } else {
-            return null;
+            return new ArrayList<>();
         }
     }
 }

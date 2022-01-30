@@ -6,6 +6,7 @@ import me.sadev.votar.cache.models.VotePlayer;
 import me.sadev.votar.commands.tab.TabCandidatar;
 import me.sadev.votar.commands.tab.TabVotar;
 import me.sadev.votar.commands.text.Candidatar;
+import me.sadev.votar.commands.text.TopPlayers;
 import me.sadev.votar.commands.text.VoteToPlayer;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.ChatColor;
@@ -63,7 +64,9 @@ public final class VotosPlugin extends JavaPlugin {
 
         getCommand("Candidatar").setExecutor(new Candidatar(this));
         getCommand("Candidatar").setTabCompleter(new TabCandidatar());
-        
+
+        getCommand("TopPlayers").setExecutor(new TopPlayers(this));
+
         getServer().getPluginManager().registerEvents(new Listeners(this), this);
 
     }

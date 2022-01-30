@@ -19,7 +19,7 @@ public class TabCandidatar implements TabCompleter {
             list.add("Senador");
             return list;
         } else {
-            return null;
+            return new ArrayList<>();
         }
     }
 }
