@@ -3,6 +3,8 @@ package me.sadev.votar;
 import me.sadev.votar.cache.database.MySQLGetter;
 import me.sadev.votar.cache.database.Mysql;
 import me.sadev.votar.cache.models.VotePlayer;
+import me.sadev.votar.commands.tab.TabCandidatar;
+import me.sadev.votar.commands.tab.TabVotar;
 import me.sadev.votar.commands.text.Candidatar;
 import me.sadev.votar.commands.text.VoteToPlayer;
 import net.milkbowl.vault.economy.Economy;
@@ -26,7 +28,7 @@ public final class VotosPlugin extends JavaPlugin {
 
     public HashMap<String, VotePlayer> players = new HashMap<>();
 
-    public ArrayList<String> topNome    = new ArrayList<>();
+    public ArrayList<String>  topNome   = new ArrayList<>();
     public ArrayList<Integer> topNumero = new ArrayList<>();
 
     public Economy econ;
@@ -57,8 +59,11 @@ public final class VotosPlugin extends JavaPlugin {
         asyncTopPlayers();
 
         getCommand("VoteToPlayer").setExecutor(new VoteToPlayer(this));
-        getCommand("Candidatar").setExecutor(new Candidatar(this));
+        getCommand("VoteToPlayer").setTabCompleter(new TabVotar(this));
 
+        getCommand("Candidatar").setExecutor(new Candidatar(this));
+        getCommand("Candidatar").setTabCompleter(new TabCandidatar());
+        
         getServer().getPluginManager().registerEvents(new Listeners(this), this);
 
     }

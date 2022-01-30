@@ -22,10 +22,4 @@ public class Vault {
         getEconomy().withdrawPlayer(player, money);
         return true;
     }
-
-    public boolean depositPlayer(Player player, double money) {
-        getEconomy().depositPlayer(player, money);
-        return true;
-    }
-
 }

@@ -11,7 +11,6 @@ import org.bukkit.event.player.PlayerJoinEvent;
 public class Listeners implements Listener {
 
     private final VotosPlugin plugin;
-
     public Listeners(VotosPlugin plugin) {
         this.plugin = plugin;
     }
